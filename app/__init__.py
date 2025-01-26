@@ -1,5 +1,6 @@
 from flask import Flask
 from .celery_app import make_celery
+from .routes import bp
 
 def create_app():
     app = Flask(__name__)
@@ -8,9 +9,7 @@ def create_app():
         CELERY_RESULT_BACKEND='redis://redis:6379/0'
     )
     
-    celery = make_celery(app)
-    
-    from .routes import bp
+    app.celery = make_celery(app)
     app.register_blueprint(bp)
     
     return app

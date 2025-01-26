@@ -1,3 +1,12 @@
-flask==3.0.0
-celery==5.3.6
-redis==5.0.1
+flask
+celery
+redis
+python-dotenv
+supabase        # For integrating with Supabase
+selenium        # For web scraping functionality
+webdriver-manager  # To manage browser drivers (e.g., ChromeDriver)
+requests        # To handle HTTP requests (optional but commonly needed)
+pandas          # If you're processing data in tabular format
+retrying
+psutil          # For resource monitoring
+docker          # For interacting with Docker
